@@ -11,11 +11,14 @@ pipeline {
 
           }
           steps {
+            sh 'hostname'
+            sh 'whoami'
             sh 'yarn'
+            sh 'ls -al /home/phanngl'
           }
         }
 
-        stage('') {
+        stage('build 13') {
           agent {
             docker {
               image 'node:13'
@@ -23,7 +26,10 @@ pipeline {
 
           }
           steps {
+            sh 'hostname'
+            sh 'whoami'
             sh 'yarn start'
+            sh 'yarn'
           }
         }
 
