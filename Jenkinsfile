@@ -14,7 +14,7 @@ pipeline {
             sh 'hostname'
             sh 'whoami'
             sh 'yarn'
-            sh 'ls -al /home/phanngl'
+            sh 'ls -al /'
           }
         }
 
@@ -28,8 +28,8 @@ pipeline {
           steps {
             sh 'hostname'
             sh 'whoami'
-            sh 'yarn start'
             sh 'yarn'
+            sh 'yarn start'
           }
         }
 
